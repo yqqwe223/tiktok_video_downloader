@@ -1,0 +1,839 @@
+```html
+<!doctype html>
+<html lang="ko-KR">
+<head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="TikTok 영상 다운로더: 당사의 TikTok 영상 다운로더를 사용하여 어떤 영상이나 GIF도 다운로드하고 MP3나 GIF 형식으로 변환할 수 있습니다. 지금 바로 당사의 TikTok 영상 다운로더를 사용해 보세요!">
+<meta name="keywords" content="TikTok 영상 다운로드">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="TikTok 영상 다운로더——TikTok에서 영상과 GIF 받기">
+<meta name="twitter:description" content="TikTok 영상 다운로더: 당사의 TikTok 영상 다운로더를 사용하여 어떤 영상이나 GIF도 다운로드하고 MP3나 GIF 형식으로 변환할 수 있습니다. 지금 바로 당사의 TikTok 영상 다운로더를 사용해 보세요!">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png  ">
+<meta name="twitter:image:alt" content="TikTok 영상 다운로더——TikTok에서 영상과 GIF 받기">
+
+<meta property="og:title" content="TikTok 영상 다운로더——TikTok에서 영상과 GIF 받기" />
+<meta property="og:description" content="TikTok 영상 다운로더: 당사의 TikTok 영상 다운로더를 사용하여 어떤 영상이나 GIF도 다운로드하고 MP3나 GIF 형식으로 변환할 수 있습니다. 지금 바로 당사의 TikTok 영상 다운로더를 사용해 보세요!" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png  " />
+<meta property="og:image:alt" content="TikTok 영상 다운로더——TikTok에서 영상과 GIF 받기" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css    ">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css    " />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css  " rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js  "></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css  " rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com  ">
+<link rel="preconnect" href="https://fonts.gstatic.com  " crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>TikTok 영상 다운로더——TikTok에서 영상과 GIF 받기</title>
+</head>
+
+
+<body>
+
+
+ <style>
+    /* ================== 전역 변수 및 초기화 ================== */
+    :root {
+      --tiktok-black: #000000;
+      --tiktok-red: #fe2c55;
+      --bg-light: #fafafa;
+      --text-dark: #212121;
+      --text-light: #5f6368;
+      --card-bg: #ffffff;
+      --border-color: #e0e0e0;
+      --shadow: 0 2px 10px rgba(0,0,0,0.08);
+      --radius: 12px;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      padding: 5px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ================== 공통 스타일 ================== */
+    a {
+      color: var(--tiktok-red);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background-color: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.94em;
+      color: var(--tiktok-red);
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: var(--tiktok-black);
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .notice-box {
+      background: #fff5f5;
+      border-left: 4px solid var(--tiktok-red);
+      padding: 1.2rem;
+      margin: 1.5rem auto 2rem;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border-color);
+      color: var(--tiktok-black);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: #333;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      color: var(--tiktok-red);
+      margin: 1.4rem 0 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* ================== 레이아웃 구성 요소 ================== */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .step-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      padding: 1.3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0 0.5rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+
+        .footer {
+            background: #212529;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+
+    /* ================== 반응형 중단점 ================== */
+    @media (min-width: 768px) {
+      body {
+        padding: 5px;
+      }
+      h1 {
+        font-size: 2.7rem;
+      }
+      .subtitle {
+        font-size: 1.35rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        padding: 5px;
+      }
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.9rem;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        padding: 0 8px;
+      }
+      .notice-box {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .step-card, .feature-card, .faq-item {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+<div class="container-fluid  text-break">
+
+
+<div class="row" style="background: linear-gradient(135deg, #25F4EE 0%, #000000 50%, #FE2C55 100%);">
+<div class="row" >
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='사이트 로고'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+	<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+			<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+				<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>홈</a>&nbsp;&nbsp;</li>
+	
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="fa-solid fa-video"></i>
+						<span>비디오 다운로드 도구</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{toollistele|safe}}
+						</ul>
+					</div>&nbsp;&nbsp;
+				</div>
+				
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="bi bi-globe"></i>
+						<span>🇰🇷 한국어</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{langlistele|safe}}
+						</ul>
+					</div>
+				</div>
+			</ul>
+		</div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+	
+	
+		<br />
+		<div id='titleweb'  style='text-align:center;color:#2D3E50' >
+			<h1 style='font-family: "Tektur",sans-serif;'>🎵 TikTok 영상 다운로더</h1>
+			<p class="subtitle">무료로 TikTok 공개 영상 다운로드 · 고화질 워터마크 없는 MP4 · 로그인 불필요 · 최신 링크 형식 지원</p>
+		</div> 
+		<div id='ad' >
+		</div>
+		<div style='text-align:center'>
+		
+		<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="TikTok 영상 링크 붙여넣기" >
+		</div>
+		<div style='text-align:center;color:#2D3E50'>
+		예시 : https://www.tiktok.com/@novoaripple1/video/7548476830056025374
+		</div>
+		<br/>
+		<div style='text-align:center'>
+		<button type="button" class="btn" id='bigbutton' style='background-color:#FF6B35;color:white'><i class="bi bi-download"></i> 영상 다운로드</button>
+		</div>
+		<br/>
+		
+		<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+			<span class="visually-hidden">다운로드 중...</span>
+		</div>
+		
+		<div class=""  id='hashshow' style='color:#2D3E50'>
+		</div> 
+		<br />
+		
+		
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+
+	
+	<div class="container">
+	
+		<div class="notice-box">
+			🔒 <strong>중요 안내:</strong> 본 도구는 <strong>영상을 저장하지 않으며</strong>, <strong>사용자 데이터를 수집하지 않고</strong>, <strong>공개 영상</strong>의 워터마크 없는 직접 링크만 분석합니다. 비공개 콘텐츠나 상업적 용도로 사용하지 마시고, 크리에이터의 저작권을 존중해 주세요.
+		</div>
+	
+	
+		<section>
+		<h2>✨ 주요 기능</h2>
+		<div class="feature-grid">
+			<div class="feature-card">
+			<h4>🎥 워터마크 없는 고화질 영상</h4>
+			<p>TikTok 공식 워터마크(사용자 이름 및 로고 포함)를 자동으로 제거하고, 원본 화질의 MP4 파일을 제공하며, 최대 1080P(원본 영상에 따라 다름)를 지원합니다.</p>
+			</div>
+			<div class="feature-card">
+			<h4>⚡ 빠른 분석</h4>
+			<p>평균 2~3초 내에 분석이 완료되며, 최신 TikTok 링크 형식(<code>@username</code>, <code>tiktok.com/v/</code>, 단축 링크 등)을 지원합니다.</p>
+			</div>
+			<div class="feature-card">
+			<h4>📱 모든 플랫폼 호환</h4>
+			<p>iOS, Android, Windows, macOS에 완벽하게 적합하며, 주요 브라우저(Chrome, Safari, Edge)에서 모두 사용 가능합니다.</p>
+			</div>
+			<div class="feature-card">
+			<h4>🔐 프라이버시 우선</h4>
+			<p>TikTok 계정 로그인이 필요 없고, 어떤 권한도 요구하지 않으며, 모든 요청은 암호화되어 사용자의 개인정보를 보호합니다.</p>
+			</div>
+		</div>
+		<p><strong>✅ 지원:</strong> 공개 영상(릴스 포함), 일반 TikTok 포스트<br>
+		<strong>❌ 미지원:</strong> 비공개 계정 영상, 유료 콘텐츠(시리즈), 라이브 리플레이, 스토리</p>
+		</section>
+	
+		<section>
+		<h2>📥 상세 사용 안내 (쉬운 3단계 다운로드)</h2>
+		<div class="step-container">
+			<div class="step-card">
+			<h4>1단계: TikTok 영상 링크 복사하기</h4>
+			<ol>
+				<li>TikTok 앱을 열거나 <a href="https://www.tiktok.com" target="_blank">tiktok.com</a>을 방문하세요.</li>
+				<li>다운로드하려는 영상을 재생하세요.</li>
+				<li>오른쪽의 <strong>"공유"</strong> 버튼을 클릭 → <strong>"링크 복사"</strong>를 선택하세요.<br>
+				예시 링크:<br>
+				<code>https://www.tiktok.com/@username/video/1234567890123456789</code><br>
+				또는 단축 링크:<br>
+				<code>https://vt.tiktok.com/ZSRxxxxx/</code>
+				</li>
+			</ol>
+			<p><strong>💡 팁:</strong> <strong>공개 영상</strong>만 분석 가능합니다. 비공개 계정이나 제한된 콘텐츠는 다운로드할 수 없습니다.</p>
+			</div>
+	
+			<div class="step-card">
+			<h4>2단계: 링크 붙여넣고 분석하기</h4>
+			<ol>
+				<li>이 다운로더 페이지로 돌아오세요.</li>
+				<li>링크를 상단 입력란에 붙여넣으세요(향후 여기에 분석 기능이 통합될 예정입니다).</li>
+				<li><strong>【영상 다운로드】</strong> 버튼을 클릭하세요.</li>
+			</ol>
+			<p>시스템이 자동으로 다음과 같은 작업을 수행합니다:<br>
+			• 영상 ID와 작성자 정보를 식별<br>
+			• 워터마크 없는 고화질 영상의 직접 링크를 획득<br>
+			• 영상 미리보기와 다운로드 버튼을 표시</p>
+			</div>
+
+			<div class="step-card">
+			<h4>3단계: 워터마크 없는 영상 다운로드하기</h4>
+			<ul>
+				<li><strong>【MP4 다운로드】</strong> 버튼을 클릭하세요.</li>
+				<li>브라우저가 워터마크 없는 고화질 영상(.mp4 형식) 다운로드를 자동으로 시작합니다.</li>
+				<li>파일은 기본적으로 기기의 <strong>"다운로드" 폴더</strong>에 저장됩니다.</li>
+			</ul>
+			<p><strong>📌 사용 권장 사항:</strong></p>
+			<ul>
+				<li>영감을 주는 소재를 저장하시나요? → 원본 화질 영상을 다운로드하여 보관하세요.</li>
+				<li>리믹스를 제작하시나요? → 워터마크 없는 영상이 편집하기 더 쉽습니다.</li>
+				<li>오프라인으로 시청하시나요? → 다운로드 후 로컬 플레이어로 언제든지 다시 볼 수 있습니다.</li>
+			</ul>
+			</div>
+		</div>
+		</section>
+
+		<section>
+		<h2>⚙️ 기술 원리 설명</h2>
+		<ul>
+			<li>웹 요청을 시뮬레이션하여 TikTok 영상 메타데이터를 획득하고, 공개 API를 활용하여 <strong>워터마크 없는 영상의 직접 링크</strong>를 추출합니다.</li>
+			<li><code>vt.tiktok.com</code>과 같은 리디렉션 단축 링크를 자동으로 처리하며, 모든 주요 TikTok 링크 형식과 호환됩니다.</li>
+			<li>영상은 원본 MP4 형식으로 제공되며, <strong>TikTok 로고, 사용자 이름 워터마크 또는 백그라운드 음악 식별자가 포함되지 않습니다</strong>.</li>
+			<li>모든 분석은 서버 측에서 완료되며, <strong>TikTok에 사용자 신원 정보를 전송하지 않아</strong> 익명성을 보장합니다.</li>
+			<li>직접 링크의 유효 기간은 약 2시간이므로, 즉시 다운로드하시기 바랍니다.</li>
+		</ul>
+		</section>
+	
+		<section>
+		<h2>⚠️ 저작권 및 사용 약관</h2>
+		<ol>
+			<li><strong>개인적 사용만 가능:</strong> 다운로드한 콘텐츠를 상업적 배포, 재업로드, 광고 또는 수익 창출 목적으로 사용하는 것은 금지됩니다.</li>
+			<li><strong>크리에이터 존중:</strong> 재배포가 명시적으로 금지된 콘텐츠는 다운로드하지 마세요. 좋아요, 팔로우, 공유로 원작자를 지원하는 것을 권장합니다.</li>
+			<li><strong>법적 위험은 사용자 부담:</strong> 사용자는 다운로드 행위가 자신의 국가/지역의 저작권 및 개인정보 보호법에 부합하는지 스스로 판단해야 합니다.</li>
+			<li><strong>남용 금지:</strong> 스크립트를 사용한 대량 요청은 금지되며, 시스템은 빈번한 요청 IP를 제한하거나 차단할 수 있습니다.</li>
+		</ol>
+		</section>
+
+		<section>
+		<h2>❓ 자주 묻는 질문 (FAQ)</h2>
+		<div class="faq-list">
+			<div class="faq-item">
+			<strong>Q: "영상을 분석할 수 없습니다"라는 메시지가 표시되는 이유는 무엇인가요?</strong><br>
+			가능한 원인: 영상이 비공개 상태, 계정이 비공개로 설정됨, 링크가 만료됨, 또는 TikTok이 일시적으로 크롤링 방지 메커니즘을 업데이트했습니다.
+			</div>
+			<div class="faq-item">
+			<strong>Q: 다운로드한 영상은 정말로 워터마크가 없나요?</strong><br>
+			네! 저희는 TikTok 내부의 워터마크 없는 소스를 제공하며, 어떤 로고나 사용자 이름 오버레이도 포함하지 않습니다.
+			</div>
+			<div class="faq-item">
+			<strong>Q: TikTok 오디오(MP3)를 다운로드할 수 있나요?</strong><br>
+			현재 버전은 영상 다운로드만 지원합니다. MP4를 다운로드한 후 온라인 도구를 사용하여 오디오를 추출할 수 있습니다.
+			</div>
+			<div class="faq-item">
+			<strong>Q: 휴대폰에서 다운로드 후 파일을 찾을 수 없어요.</strong><br>
+			Android: "파일 관리자"를 사용하여 "다운로드" 폴더로 이동하세요; iOS: Safari에서 다운로드 후 "파일에 저장"을 선택하세요.
+			</div>
+			<div class="faq-item">
+			<strong>Q: TikTok 라이브 리플레이를 지원하나요?</strong><br>
+			현재 라이브 콘텐츠는 지원하지 않습니다. 공개적으로 게시된 짧은 영상만 지원합니다.
+			</div>
+		</div>
+		</section>
+
+		<footer>
+		<p>문제가 있거나 기능 제안이 있으신가요? 언제든지 연락 주세요!<br>
+		📧 이메일: <a href="{{mailtocontactmail}}">{{contactmail}}</a><br>
+		💻 GitHub: <a href="{{githublink}}" target="_blank">{{githublink}}</a></p>
+		<p style="margin-top: 1.2rem; font-style: italic; color: #666;">
+			<strong>TikTok 영상 다운로더</strong>를 사용해 주셔서 감사합니다 ——<br>
+			인기 영상을 오프라인에서 언제든지 다시 볼 수 있습니다. 🔥
+		</p>
+		</footer>
+	
+	<footer class="footer">
+			<p>© {{year_string}} TikTok Video Downloader. All rights reserved.</p>
+			<p>이 사이트는 TikTok, Inc.와 공식적으로 연관되어 있지 않습니다 | 
+			<a href="/privacy-policy" style="color: #00c6ff;">개인정보 보호정책</a> | 
+			<a href="/terms-of-service" style="color: #00c6ff;">서비스 약관</a> | 
+			<a href="/about-us" style="color: #00c6ff;">소개</a>| 
+			<a href="/contact-us" style="color: #00c6ff;">문의하기</a>
+			</p>
+			<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+				이 도구는 개인 학습 및 연구 목적으로만 사용되며, 사용자는 모든 법적 책임을 스스로 부담해야 합니다.
+			</p>
+			<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+				저작권으로 보호된 콘텐츠를 다운로드하는 것은 관련 법규를 위반할 수 있으며, 현지 법률을 준수해 주시기 바랍니다.
+			</p>
+	</footer>
+
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />영상을 MP3로 변환 중</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('결과 없음');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">영상 MP3 다운로드</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">결과 없음</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />영상을 GIF로 변환 중</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('결과 없음');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">영상 GIF 다운로드</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">결과 없음</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />영상 다운로드 중</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_tiktok', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('결과 없음');
+				return;
+				}
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);//
+				
+				var v_title=response.v_title;//
+				var v_webpage_url=encodeURI(response.v_webpage_url);//
+				var v_duration_string=response.v_duration_string;//
+				
+				var v_uploader_id=response.v_uploader_id;//
+				var v_uploader=response.v_uploader;//
+				var v_uploader_url=encodeURI(response.v_uploader_url);//
+				var v_view_count=response.v_view_count;//
+				var v_like_count=response.v_like_count;//
+				var v_comment_count=response.v_comment_count;//
+				var v_repost_count=response.v_repost_count;//
+				var v_width=response.v_width;//
+				var v_height=response.v_height;//
+				
+				var v_upload_date=response.v_upload_date;//
+				var v_ext=response.v_ext;//
+				var v_resolution=response.v_resolution;//
+				var v_aspect_ratio=response.v_aspect_ratio;//
+				var v_des=response.v_des;//
+				var v_url=response.v_url;//
+				
+				
+				var v_formats = response.formatslist;
+				var v_thumbnails =response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			//var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+v_url+'">영상 다운로드</a></div>';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+			
+				turl=encodeURI(v_formats[i][0]);
+				tres=v_formats[i][1];
+				var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+turl+'">영상 다운로드 (해상도 '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'<br />'
+			for (let i = 0; i < v_thumbnails.length; i++) {
+			
+				turl=encodeURI(v_thumbnails[i][0]);
+				tres=v_thumbnails[i][1];
+				var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">썸네일 다운로드 (해상도 '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'</div></div><hr />';
+	
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>제목: </b>'+v_title+'</div><div><b>웹페이지 링크: </b>'+v_webpage_url+'</div><div><b>길이: </b>'+v_duration_string+'</div><div><b>업로더: </b>'+v_uploader+'</div><div><b>업로더 ID: </b>'+v_uploader_id+'</div><div><b>업로더 링크: </b>'+v_uploader_url+'</div><div><b>업로드 날짜: </b>'+v_upload_date+'</div><div><b>조회수: </b>'+v_view_count+'</div></div>';
+	
+			var intext=intext+'<div class="col-sm-6" ><div><b>좋아요 수: </b>'+v_like_count+'</div><div><b>댓글 수: </b>'+v_comment_count+'</div><div><b>리포스트 수: </b>'+v_repost_count+'</div><div><b>너비: </b>'+v_width+'</div><div><b>높이: </b>'+v_height+'</div><div><b>파일 형식: </b>'+v_ext+'</div><div><b>해상도: </b>'+v_resolution+'</div><div><b>화면비: </b>'+v_aspect_ratio+'</div></div></div>';
+
+			var intext=intext+'<div class="row" ><div class="col-sm-12" ><div><b>영상 설명: </b>'+v_des+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="pinterest" data-title="'+v_title+'"><span  style="font-size:1em“>pinterest</span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">결과 없음</p>');
+		}
+		}
+	}
+});
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>
+```

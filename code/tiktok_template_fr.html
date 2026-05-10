@@ -1,0 +1,839 @@
+```html
+<!doctype html>
+<html lang="fr-FR">
+<head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Téléchargeur de vidéos TikTok : Utilisez notre téléchargeur de vidéos TikTok pour télécharger n'importe quelle vidéo ou GIF et les convertir en MP3 ou GIF. Qu'attendez-vous ? Essayez notre téléchargeur de vidéos TikTok dès maintenant !">
+<meta name="keywords" content="Téléchargeur de vidéos TikTok">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="Téléchargeur de vidéos TikTok – Obtenez des vidéos et GIF depuis TikTok">
+<meta name="twitter:description" content="Téléchargeur de vidéos TikTok : Utilisez notre téléchargeur de vidéos TikTok pour télécharger n'importe quelle vidéo ou GIF et les convertir en MP3 ou GIF. Qu'attendez-vous ? Essayez notre téléchargeur de vidéos TikTok dès maintenant !">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png  ">
+<meta name="twitter:image:alt" content="Téléchargeur de vidéos TikTok – Obtenez des vidéos et GIF depuis TikTok">
+
+<meta property="og:title" content="Téléchargeur de vidéos TikTok – Obtenez des vidéos et GIF depuis TikTok" />
+<meta property="og:description" content="Téléchargeur de vidéos TikTok : Utilisez notre téléchargeur de vidéos TikTok pour télécharger n'importe quelle vidéo ou GIF et les convertir en MP3 ou GIF. Qu'attendez-vous ? Essayez notre téléchargeur de vidéos TikTok dès maintenant !" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png  " />
+<meta property="og:image:alt" content="Téléchargeur de vidéos TikTok – Obtenez des vidéos et GIF depuis TikTok" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css    ">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css    " />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css  " rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js  "></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css  " rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com  ">
+<link rel="preconnect" href="https://fonts.gstatic.com  " crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>Téléchargeur de vidéos TikTok – Obtenez des vidéos et GIF depuis TikTok</title>
+</head>
+
+
+<body>
+
+
+ <style>
+    /* ================== Variables globales et réinitialisation ================== */
+    :root {
+      --tiktok-black: #000000;
+      --tiktok-red: #fe2c55;
+      --bg-light: #fafafa;
+      --text-dark: #212121;
+      --text-light: #5f6368;
+      --card-bg: #ffffff;
+      --border-color: #e0e0e0;
+      --shadow: 0 2px 10px rgba(0,0,0,0.08);
+      --radius: 12px;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      padding: 5px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ================== Styles généraux ================== */
+    a {
+      color: var(--tiktok-red);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background-color: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.94em;
+      color: var(--tiktok-red);
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: var(--tiktok-black);
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .notice-box {
+      background: #fff5f5;
+      border-left: 4px solid var(--tiktok-red);
+      padding: 1.2rem;
+      margin: 1.5rem auto 2rem;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border-color);
+      color: var(--tiktok-black);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: #333;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      color: var(--tiktok-red);
+      margin: 1.4rem 0 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* ================== Composants de mise en page ================== */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .step-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      padding: 1.3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0 0.5rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+
+        .footer {
+            background: #212529;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+
+    /* ================== Points de rupture responsives ================== */
+    @media (min-width: 768px) {
+      body {
+        padding: 5px;
+      }
+      h1 {
+        font-size: 2.7rem;
+      }
+      .subtitle {
+        font-size: 1.35rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        padding: 5px;
+      }
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.9rem;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        padding: 0 8px;
+      }
+      .notice-box {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .step-card, .feature-card, .faq-item {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+<div class="container-fluid  text-break">
+
+
+<div class="row" style="background: linear-gradient(135deg, #25F4EE 0%, #000000 50%, #FE2C55 100%);">
+<div class="row" >
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='logo du site'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+	<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+			<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+				<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>Accueil</a>&nbsp;&nbsp;</li>
+	
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="fa-solid fa-video"></i>
+						<span>Outils de téléchargement vidéo</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{toollistele|safe}}
+						</ul>
+					</div>&nbsp;&nbsp;
+				</div>
+				
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="bi bi-globe"></i>
+						<span>🇫🇷 Français</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{langlistele|safe}}
+						</ul>
+					</div>
+				</div>
+			</ul>
+		</div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+	
+	
+		<br />
+		<div id='titleweb'  style='text-align:center;color:#2D3E50' >
+			<h1 style='font-family: "Tektur",sans-serif;'>🎵 Téléchargeur de vidéos TikTok</h1>
+			<p class="subtitle">Téléchargement gratuit de vidéos TikTok publiques en ligne · MP4 HD sans filigrane · Aucune connexion requise · Prend en charge les derniers formats de liens</p>
+		</div> 
+		<div id='ad' >
+		</div>
+		<div style='text-align:center'>
+		
+		<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="Collez le lien de la vidéo TikTok" >
+		</div>
+		<div style='text-align:center;color:#2D3E50'>
+		Exemple : https://www.tiktok.com/@novoaripple1/video/7548476830056025374
+		</div>
+		<br/>
+		<div style='text-align:center'>
+		<button type="button" class="btn" id='bigbutton' style='background-color:#FF6B35;color:white'><i class="bi bi-download"></i> Télécharger la vidéo</button>
+		</div>
+		<br/>
+		
+		<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+			<span class="visually-hidden">Téléchargement en cours...</span>
+		</div>
+		
+		<div class=""  id='hashshow' style='color:#2D3E50'>
+		</div> 
+		<br />
+		
+		
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+
+	
+	<div class="container">
+	
+		<div class="notice-box">
+			🔒 <strong>Note importante :</strong> Cet outil <strong>ne stocke pas de vidéos</strong>, <strong>ne collecte pas de données utilisateur</strong> et ne fait qu'analyser les liens directs sans filigrane pour les vidéos <strong>publiques</strong>. Ne l'utilisez pas pour télécharger du contenu privé ou à des fins commerciales. Respectez les droits d'auteur des créateurs.
+		</div>
+	
+	
+		<section>
+		<h2>✨ Fonctionnalités principales</h2>
+		<div class="feature-grid">
+			<div class="feature-card">
+			<h4>🎥 Vidéo HD sans filigrane</h4>
+			<p>Supprime automatiquement le filigrane officiel de TikTok (y compris le nom d'utilisateur et le logo), fournit un fichier MP4 de qualité originale, prend en charge jusqu'à 1080P (selon la vidéo d'origine).</p>
+			</div>
+			<div class="feature-card">
+			<h4>⚡ Analyse rapide</h4>
+			<p>Termine l'analyse en moyenne en 2~3 secondes, prend en charge les derniers formats de liens TikTok (y compris <code>@username</code>, <code>tiktok.com/v/</code>, liens courts, etc.).</p>
+			</div>
+			<div class="feature-card">
+			<h4>📱 Compatibilité multiplateforme</h4>
+			<p>Parfaitement adapté pour iOS, Android, Windows, macOS, fonctionne sur tous les principaux navigateurs (Chrome, Safari, Edge).</p>
+			</div>
+			<div class="feature-card">
+			<h4>🔐 Priorité à la confidentialité</h4>
+			<p>Aucune connexion au compte TikTok requise, aucune demande d'autorisation, toutes les requêtes sont cryptées, protégeant votre vie privée et votre sécurité.</p>
+			</div>
+		</div>
+		<p><strong>✅ Pris en charge :</strong> Vidéos publiques (y compris les Reels), publications TikTok normales<br>
+		<strong>❌ Non pris en charge :</strong> Vidéos de comptes privés, contenu payant (Séries), rediffusions en direct, Stories</p>
+		</section>
+	
+		<section>
+		<h2>📥 Guide d'utilisation détaillé (Téléchargement facile en 3 étapes)</h2>
+		<div class="step-container">
+			<div class="step-card">
+			<h4>Étape 1 : Copier le lien de la vidéo TikTok</h4>
+			<ol>
+				<li>Ouvrez l'application TikTok ou visitez <a href="https://www.tiktok.com" target="_blank">tiktok.com</a></li>
+				<li>Lisez la vidéo que vous souhaitez télécharger</li>
+				<li>Appuyez sur le bouton <strong>"Partager"</strong> à droite → Sélectionnez <strong>"Copier le lien"</strong><br>
+				Exemple de lien :<br>
+				<code>https://www.tiktok.com/@username/video/1234567890123456789</code><br>
+				Ou lien court :<br>
+				<code>https://vt.tiktok.com/ZSRxxxxx/</code>
+				</li>
+			</ol>
+			<p><strong>💡 Conseil :</strong> Seules les <strong>vidéos publiques</strong> peuvent être analysées. Les comptes privés ou le contenu restreint ne peuvent pas être téléchargés.</p>
+			</div>
+	
+			<div class="step-card">
+			<h4>Étape 2 : Coller le lien et analyser</h4>
+			<ol>
+				<li>Retournez sur cette page de téléchargeur</li>
+				<li>Collez le lien dans la zone de saisie en haut (votre fonctionnalité d'analyse sera intégrée ici à l'avenir)</li>
+				<li>Cliquez sur le bouton <strong>【Télécharger la vidéo】</strong></li>
+			</ol>
+			<p>Le système effectuera automatiquement :<br>
+			• L'identification de l'ID vidéo et des informations de l'auteur<br>
+			• L'obtention du lien direct vers la vidéo HD sans filigrane<br>
+			• L'affichage de l'aperçu vidéo et des boutons de téléchargement</p>
+			</div>
+
+			<div class="step-card">
+			<h4>Étape 3 : Télécharger la vidéo sans filigrane</h4>
+			<ul>
+				<li>Cliquez sur le bouton <strong>【Télécharger MP4】</strong></li>
+				<li>Le navigateur commencera automatiquement à télécharger la vidéo HD sans filigrane (format .mp4)</li>
+				<li>Le fichier est enregistré par défaut dans le dossier <strong>"Téléchargements"</strong> de l'appareil</li>
+			</ul>
+			<p><strong>📌 Suggestions d'utilisation :</strong></p>
+			<ul>
+				<li>Enregistrer du matériel d'inspiration ? → Téléchargez la vidéo en qualité originale pour la sauvegarder</li>
+				<li>Créer un remix ? → La vidéo sans filigrane est plus facile à éditer</li>
+				<li>Regarder hors ligne ? → Après le téléchargement, vous pouvez la regarder à tout moment avec un lecteur local</li>
+			</ul>
+			</div>
+		</div>
+		</section>
+
+		<section>
+		<h2>⚙️ Explication du principe technique</h2>
+		<ul>
+			<li>Obtient les métadonnées des vidéos TikTok en simulant des requêtes web, utilise des API publiques pour extraire le <strong>lien direct vers la vidéo sans filigrane</strong>.</li>
+			<li>Traite automatiquement les liens courts de redirection (par ex. <code>vt.tiktok.com</code>), compatible avec tous les principaux formats de liens TikTok.</li>
+			<li>Les vidéos sont fournies au format MP4 original, <strong>sans logo TikTok, filigrane de nom d'utilisateur ou identifiants de musique de fond</strong>.</li>
+			<li>Toute l'analyse est effectuée côté serveur, <strong>aucune information d'identité utilisateur n'est envoyée à TikTok</strong>, garantissant l'anonymat.</li>
+			<li>Le lien direct est valide pendant environ 2 heures, veuillez télécharger rapidement.</li>
+		</ul>
+		</section>
+	
+		<section>
+		<h2>⚠️ Droits d'auteur et conditions d'utilisation</h2>
+		<ol>
+			<li><strong>Usage personnel uniquement :</strong> Il est interdit d'utiliser le contenu téléchargé à des fins de distribution commerciale, de ré-upload, de publicité ou de génération de profits.</li>
+			<li><strong>Respectez les créateurs :</strong> Ne téléchargez pas de contenu interdisant explicitement la redistribution. Il est recommandé de soutenir les auteurs originaux avec des likes, des abonnements et des partages.</li>
+			<li><strong>Risque légal à la charge de l'utilisateur :</strong> Les utilisateurs doivent juger par eux-mêmes si le comportement de téléchargement est conforme aux lois sur le droit d'auteur et la vie privée de leur pays/région.</li>
+			<li><strong>Interdiction d'abus :</strong> L'utilisation de scripts pour des requêtes groupées est interdite. Le système limitera ou bloquera les IP à haute fréquence.</li>
+		</ol>
+		</section>
+
+		<section>
+		<h2>❓ Questions fréquemment posées (FAQ)</h2>
+		<div class="faq-list">
+			<div class="faq-item">
+			<strong>Q : Pourquoi le message "Impossible d'analyser la vidéo" s'affiche-t-il ?</strong><br>
+			Causes possibles : la vidéo est privée, le compte est défini sur privé, le lien a expiré, ou TikTok a temporairement mis à jour son mécanisme anti-scraping.
+			</div>
+			<div class="faq-item">
+			<strong>Q : La vidéo téléchargée est-elle vraiment sans filigrane ?</strong><br>
+			Oui ! Nous fournissons la source interne sans filigrane de TikTok, sans aucune superposition de logo ou de nom d'utilisateur.
+			</div>
+			<div class="faq-item">
+			<strong>Q : Puis-je télécharger l'audio TikTok (MP3) ?</strong><br>
+			La version actuelle ne prend en charge que le téléchargement vidéo. Vous pouvez télécharger le MP4 puis utiliser un outil en ligne pour extraire l'audio.
+			</div>
+			<div class="faq-item">
+			<strong>Q : Je ne trouve pas le fichier après le téléchargement sur mobile ?</strong><br>
+			Android : Utilisez le "Gestionnaire de fichiers" pour accéder au dossier "Téléchargements" ; iOS : Après le téléchargement dans Safari, sélectionnez "Enregistrer dans Fichiers".
+			</div>
+			<div class="faq-item">
+			<strong>Q : Prend-il en charge les rediffusions en direct TikTok ?</strong><br>
+			Le contenu en direct n'est actuellement pas pris en charge. Seules les courtes vidéos publiées publiquement sont prises en charge.
+			</div>
+		</div>
+		</section>
+
+		<footer>
+		<p>Vous rencontrez des problèmes ou avez des suggestions de fonctionnalités ? Contactez-nous !<br>
+		📧 E-mail : <a href="{{mailtocontactmail}}">{{contactmail}}</a><br>
+		💻 GitHub : <a href="{{githublink}}" target="_blank">{{githublink}}</a></p>
+		<p style="margin-top: 1.2rem; font-style: italic; color: #666;">
+			Merci d'utiliser <strong>Téléchargeur de vidéos TikTok</strong> ——<br>
+			Regardez les vidéos tendance hors ligne à tout moment. 🔥
+		</p>
+		</footer>
+	
+	<footer class="footer">
+			<p>© {{year_string}} TikTok Video Downloader. Tous droits réservés.</p>
+			<p>Ce site n'est pas officiellement affilié à TikTok, Inc. | 
+			<a href="/privacy-policy" style="color: #00c6ff;">Politique de confidentialité</a> | 
+			<a href="/terms-of-service" style="color: #00c6ff;">Conditions d'utilisation</a> | 
+			<a href="/about-us" style="color: #00c6ff;">À propos de nous</a>| 
+			<a href="/contact-us" style="color: #00c6ff;">Nous contacter</a>
+			</p>
+			<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+				Cet outil est uniquement destiné à un usage personnel d'apprentissage et de recherche. L'utilisateur assume toutes les responsabilités légales.
+			</p>
+			<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+				Télécharger du contenu protégé par le droit d'auteur peut enfreindre les lois et réglementations applicables. Veuillez respecter les lois locales.
+			</p>
+	</footer>
+
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />Conversion de la vidéo en Mp3</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('Aucun résultat');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">Télécharger la vidéo Mp3</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">Aucun résultat</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />Conversion de la vidéo en Gif</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('Aucun résultat');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">Télécharger la vidéo GIF</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">Aucun résultat</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />Téléchargement de la vidéo en cours</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_tiktok', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('Aucun résultat');
+				return;
+				}
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);//
+				
+				var v_title=response.v_title;//
+				var v_webpage_url=encodeURI(response.v_webpage_url);//
+				var v_duration_string=response.v_duration_string;//
+				
+				var v_uploader_id=response.v_uploader_id;//
+				var v_uploader=response.v_uploader;//
+				var v_uploader_url=encodeURI(response.v_uploader_url);//
+				var v_view_count=response.v_view_count;//
+				var v_like_count=response.v_like_count;//
+				var v_comment_count=response.v_comment_count;//
+				var v_repost_count=response.v_repost_count;//
+				var v_width=response.v_width;//
+				var v_height=response.v_height;//
+				
+				var v_upload_date=response.v_upload_date;//
+				var v_ext=response.v_ext;//
+				var v_resolution=response.v_resolution;//
+				var v_aspect_ratio=response.v_aspect_ratio;//
+				var v_des=response.v_des;//
+				var v_url=response.v_url;//
+				
+				
+				var v_formats = response.formatslist;
+				var v_thumbnails =response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			//var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+v_url+'">Télécharger la vidéo</a></div>';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+			
+				turl=encodeURI(v_formats[i][0]);
+				tres=v_formats[i][1];
+				var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+turl+'">Télécharger la vidéo (résolution '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'<br />'
+			for (let i = 0; i < v_thumbnails.length; i++) {
+			
+				turl=encodeURI(v_thumbnails[i][0]);
+				tres=v_thumbnails[i][1];
+				var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">Télécharger la miniature (résolution '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'</div></div><hr />';
+	
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>Titre : </b>'+v_title+'</div><div><b>URL de la page web : </b>'+v_webpage_url+'</div><div><b>Durée : </b>'+v_duration_string+'</div><div><b>Uploader : </b>'+v_uploader+'</div><div><b>ID Uploader : </b>'+v_uploader_id+'</div><div><b>URL Uploader : </b>'+v_uploader_url+'</div><div><b>Date de téléchargement : </b>'+v_upload_date+'</div><div><b>Nombre de vues : </b>'+v_view_count+'</div></div>';
+	
+			var intext=intext+'<div class="col-sm-6" ><div><b>Nombre de likes : </b>'+v_like_count+'</div><div><b>Nombre de commentaires : </b>'+v_comment_count+'</div><div><b>Nombre de reposts : </b>'+v_repost_count+'</div><div><b>Largeur : </b>'+v_width+'</div><div><b>Hauteur : </b>'+v_height+'</div><div><b>Format de fichier : </b>'+v_ext+'</div><div><b>Résolution : </b>'+v_resolution+'</div><div><b>Rapport d aspect : </b>'+v_aspect_ratio+'</div></div></div>';
+
+			var intext=intext+'<div class="row" ><div class="col-sm-12" ><div><b>Description de la vidéo : </b>'+v_des+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="pinterest" data-title="'+v_title+'"><span  style="font-size:1em“>pinterest</span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">Aucun résultat</p>');
+		}
+		}
+	}
+});
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>
+```
